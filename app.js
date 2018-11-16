@@ -25,8 +25,8 @@ passport.use(new GitHubStrategy({
   clientID: GITHUB_CLIENT_ID,
   clientSecret: GITHUB_CLIENT_SECRET,
   callbackURL: 'http://localhost:8000/auth/github/callback'
-}, function (accessToken, refreshToken, profile, done) {
-  process.nextTick(function () {
+}, function(accessToken, refreshToken, profile, done){
+  process.nextTick(function(){
     return done(null, profile);
   });
 }));
@@ -71,12 +71,12 @@ app.get('/auth/github/callback',
 );
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function(req, res, next){
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res, next){
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
