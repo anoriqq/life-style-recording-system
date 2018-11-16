@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "node_modules/.bin/mocha --timeout 10000"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -22,6 +23,9 @@
   "author": "show0317sw <tunakan_8584@yahoo.co.jp>",
   "license": "MIT",
   "devDependencies": {
-    "dotenv": "^6.1.0"
+    "dotenv": "^6.1.0",
+    "mocha": "^5.2.0",
+    "passport-stub": "^1.1.1",
+    "supertest": "^3.3.0"
   }
 }
