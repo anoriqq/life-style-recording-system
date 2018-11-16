@@ -28,3 +28,5 @@ const Event = loader.database.define('event', {
   freezeTableName: true,
   timestamps: false
 });
+
+module.exports = Event;
