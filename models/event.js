@@ -8,6 +8,10 @@ const Event = loader.database.define('event', {
     primaryKey: true,
     allowNull: false
   },
+  userId: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
   status: {
     type: Sequelize.INTEGER,
     allowNull: false
