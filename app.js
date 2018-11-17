@@ -9,6 +9,15 @@ var helmet = require('helmet');
 var session = require('express-session');
 var passport = require('passport');
 
+// モデルの読み込み
+var User = require('./models/user');
+var Event = require('./models/event');
+var Status = require('./models/status');
+User.sync().then(()=>{
+  Event.belongsTo(User, {foreignKey: 'userId'});
+  Event.sync();
+});
+
 var GitHubStrategy = require('passport-github2').Strategy;
 var GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 var GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
