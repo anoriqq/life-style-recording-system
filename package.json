@@ -32,6 +32,9 @@
   "author": "show0317sw <tunakan_8584@yahoo.co.jp>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
     "dotenv": "^6.1.0",
     "mocha": "^5.2.0",
     "passport-stub": "^1.1.1",
